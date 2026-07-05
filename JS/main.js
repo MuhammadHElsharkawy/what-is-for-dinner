@@ -61,9 +61,17 @@ class RecipeApp {
             const isActive = btn.dataset.tab === this.#state.currentTab;
             btn.classList.toggle('border-orange-600', isActive);
             btn.classList.toggle('border-transparent', !isActive);
+            btn.classList.toggle('hover:text-gray-700', !isActive);
             btn.classList.toggle('text-orange-600', isActive);
             btn.classList.toggle('text-gray-500', !isActive);
+            btn.classList.toggle('col-span-2', isActive);
+            btn.classList.toggle('sm:col-span-1', isActive);
         });
+        this.#dom.tabsText.forEach(btn => {
+            const isActive = btn.dataset.tab === this.#state.currentTab;
+            btn.classList.toggle('hidden', !isActive)
+            btn.classList.toggle('sm:inline', !isActive)
+        })
     }
 
     #showRandomRecipe() {
@@ -122,18 +130,23 @@ class RecipeApp {
     #displayIngredients(recipe) {
         this.#dom.ingredientsList.innerHTML = '';
         recipe.ingredients.forEach((ingredient, index) => {
-            const li = document.createElement('li');
-            li.className = 'flex items-start gap-3';
-            li.innerHTML = `
-                <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
-                    ${index + 1}
+            const label = document.createElement('label');
+            label.className = 'flex items-center gap-3 rounded-md py-1 transition-colors hover:bg-orange-100/50 active:bg-orange-50 cursor-pointer group';
+            label.innerHTML = `
+                <div class="relative flex items-center justify-center shrink-0">
+                    <input type="checkbox"
+                        class="peer appearance-none w-5.5 h-5.5 border-2 border-orange-500 rounded-lg bg-white checked:bg-orange-500 transition-all duration-200 cursor-pointer" />
+                    <svg class="absolute w-3.5 h-3.5 text-white opacity-0 peer-checked:opacity-100 transition-opacity duration-200 pointer-events-none"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
                 </div>
             `;
             const span = document.createElement('span');
-            span.className = 'text-gray-700';
+            span.className = 'text-gray-700 select-none transition-all duration-200';
             span.textContent = ingredient;
-            li.appendChild(span);
-            this.#dom.ingredientsList.appendChild(li);
+            label.appendChild(span);
+            this.#dom.ingredientsList.appendChild(label);
         });
     }
 
@@ -669,7 +682,8 @@ const app = new RecipeApp(recipes, {
     sodiumValue: '#sodium-value',
     tryAnotherBtn: '#try-another-btn',
     tabButtons: 'all:.tab-button',
-    tabContents: 'all:.tab-content'
+    tabContents: 'all:.tab-content',
+    tabsText: 'all:.tab-text'
 });
 
 app.init();

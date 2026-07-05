@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="icon" href="./Images/favicon.png"> -->
     <link rel="icon" href="./Images/favicon.png">
     <link rel="stylesheet" href="./src/output.css">
     <link rel="stylesheet" href="./src/all.min.css">
@@ -72,16 +71,16 @@
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-8">
-        <section class="bg-white rounded-3xl shadow-xl overflow-hidden mb-8 border border-orange-100">
+    <main class="max-w-7xl mx-auto px-3 py-4 sm:px-6 sm:py-8">
+        <section class="bg-white rounded-3xl shadow-xl overflow-hidden border border-orange-100 w-full mb-8">
             <div class="grid lg:grid-cols-5 lg:h-187.5">
                 <div class="lg:col-span-2 h-100 lg:h-full overflow-hidden relative">
                     <img id="recipe-image" class="w-full h-full object-cover" src="./Images/dinner-10.jpeg" alt="">
                     <div class="absolute top-6 left-6 rounded-full px-4 py-2 bg-white shadow-lg">
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-star text-yellow-400 text-sm md:text-base"></i>
-                            <span id="recipe-rate" class="font-semibold text-gray-900 text-sm md:text-base">4.9</span>
-                            <span id="recipe-reviews" class="text-gray-500 text-xs md:text-sm">(512 reviews)</span>
+                            <span id="recipe-rate" class="font-semibold text-gray-900 text-sm md:text-base"></span>
+                            <span id="recipe-reviews" class="text-gray-500 text-xs md:text-sm"></span>
                         </div>
                     </div>
                     <div
@@ -90,17 +89,17 @@
                             <div>
                                 <i class="fa-solid fa-clock text-orange-500 text-lg md:text-2xl mb-2"></i>
                                 <p class="text-xs md:text-sm text-gray-500">Prep Time</p>
-                                <p id="prep-time" class="font-bold text-gray-900 text-sm md:text-base">90 min</p>
+                                <p id="prep-time" class="font-bold text-gray-900 text-sm md:text-base"></p>
                             </div>
                             <div>
                                 <i class="fa-solid fa-fire-burner text-red-500 text-lg md:text-2xl mb-2"></i>
                                 <p class="text-xs md:text-sm text-gray-500">Cook Time</p>
-                                <p id="cook-time" class="font-bold text-gray-900 text-sm md:text-base">12 min</p>
+                                <p id="cook-time" class="font-bold text-gray-900 text-sm md:text-base"></p>
                             </div>
                             <div>
                                 <i class="fa-solid fa-users text-blue-500 text-lg md:text-2xl mb-2"></i>
                                 <p class="text-xs md:text-sm text-gray-500">Servings</p>
-                                <p id="servings" class="font-bold text-gray-900 text-sm md:text-base">2 people</p>
+                                <p id="servings" class="font-bold text-gray-900 text-sm md:text-base"></p>
                             </div>
                         </div>
                     </div>
@@ -110,24 +109,21 @@
                         <div>
                             <div class="flex items-center gap-3 mb-3">
                                 <span id="difficulty"
-                                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Intermediate</span>
+                                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold"></span>
                                 <span id="country"
-                                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Italian</span>
+                                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold"></span>
                             </div>
-                            <h3 id="recipe-name" class="text-2xl md:text-4xl font-bold text-gray-900 mb-2">Margherita
-                                Pizza</h3>
-                            <p id="recipe-description" class="text-sm md:text-lg text-gray-600">Classic Italian pizza
-                                with fresh mozzarella and
-                                basil</p>
+                            <h3 id="recipe-name" class="text-2xl md:text-4xl font-bold text-gray-900 mb-2"></h3>
+                            <p id="recipe-description" class="text-sm md:text-lg text-gray-600"></p>
                         </div>
                         <div class="flex gap-2 self-center">
                             <button
-                                class="w-12 h-12 bg-orange-100 hover:bg-orange-200 text-orange-600 rounded-xl flex items-center justify-center transition cursor-pointer">
-                                <i class="fa-solid fa-bookmark"></i>
+                                class="sm:w-12 sm:h-12 w-10 h-10 bg-orange-100 hover:bg-orange-200 text-orange-600 rounded-xl flex items-center justify-center transition cursor-pointer">
+                                <i class="text-sm fa-solid fa-bookmark"></i>
                             </button>
                             <button
-                                class="w-12 h-12 bg-orange-100 hover:bg-orange-200 text-orange-600 rounded-xl flex items-center justify-center transition cursor-pointer">
-                                <i class="fa-solid fa-share-nodes"></i>
+                                class="sm:w-12 sm:h-12 w-10 h-10 bg-orange-100 hover:bg-orange-200 text-orange-600 rounded-xl flex items-center justify-center transition cursor-pointer">
+                                <i class="text-sm fa-solid fa-share-nodes"></i>
                             </button>
                         </div>
                     </div>
@@ -147,147 +143,44 @@
                         </div>
                     </div>
                     <div class="border-b border-gray-200 mb-6 p-4">
-                        <div class="grid grid-cols-4 gap-2">
+                        <div class="grid sm:grid-cols-4 grid-cols-5 gap-2">
                             <button
-                                class="tab-button pb-2 font-semibold border-b-2 cursor-pointer text-xs md:text-base flex gap-1 md:gap-2 items-center justify-center text-orange-600 border-orange-600"
+                                class="tab-button pb-2 font-semibold border-b-2 cursor-pointer text-sm md:text-base flex gap-1 md:gap-2 items-center justify-center text-orange-600 border-orange-600 sm:col-span-1 col-span-2"
                                 data-tab="ingredients-tab">
                                 <i class="fa-solid fa-list-check shrink-0"></i>
-                                <span class="truncate">Ingredients</span>
+                                <span data-tab="ingredients-tab" id="tab-text-ingredients"
+                                    class="truncate tab-text">Ingredients</span>
                             </button>
                             <button
-                                class="tab-button pb-2 font-semibold hover:text-gray-700 border-b-2 cursor-pointer text-xs md:text-base flex gap-1 md:gap-2 items-center justify-center whitespace-nowrap text-gray-500 border-transparent"
+                                class="tab-button pb-2 font-semibold hover:text-gray-700 border-b-2 cursor-pointer text-sm md:text-base flex gap-1 md:gap-2 items-center justify-center whitespace-nowrap text-gray-500 border-transparent"
                                 data-tab="instructions-tab">
                                 <i class="fa-solid fa-book-open"></i>
-                                <span class="truncate">Instructions</span>
+                                <span data-tab="instructions-tab" id="tab-text-instructions"
+                                    class="truncate hidden sm:inline tab-text">Instructions</span>
                             </button>
                             <button
-                                class="tab-button pb-2 font-semibold hover:text-gray-700 border-b-2 cursor-pointer text-xs md:text-base flex gap-1 md:gap-2 items-center justify-center whitespace-nowrap text-gray-500 border-transparent"
+                                class="tab-button pb-2 font-semibold hover:text-gray-700 border-b-2 cursor-pointer text-sm md:text-base flex gap-1 md:gap-2 items-center justify-center whitespace-nowrap text-gray-500 border-transparent"
                                 data-tab="nutrition-tab">
                                 <i class="fa-solid fa-chart-pie"></i>
-                                <span class="truncate">Nutrition</span>
+                                <span data-tab="nutrition-tab" id="tab-text-nutrition"
+                                    class="truncate hidden sm:inline tab-text">Nutrition</span>
                             </button>
                             <button
-                                class="tab-button pb-2 font-semibold hover:text-gray-700 border-b-2 cursor-pointer text-xs md:text-base flex gap-1 md:gap-2 items-center justify-center whitespace-nowrap text-gray-500 border-transparent"
+                                class="tab-button pb-2 font-semibold hover:text-gray-700 border-b-2 cursor-pointer text-sm md:text-base flex gap-1 md:gap-2 items-center justify-center whitespace-nowrap text-gray-500 border-transparent"
                                 data-tab="tips-tab">
                                 <i class="fa-solid fa-lightbulb"></i>
-                                <span class="truncate">Chef's Tips</span>
+                                <span data-tab="tips-tab" id="tab-text-tips"
+                                    class="truncate hidden sm:inline tab-text">Chef's Tips</span>
                             </button>
                         </div>
                     </div>
                     <div id="ingredients-tab" class="tab-content h-87.5 overflow-y-auto scrollbar-thin">
                         <div class="bg-linear-to-br from-orange-50 to-amber-50 rounded-2xl p-6">
-                            <ul class="space-y-3" id="ingredients-list">
-                                <li class="flex items-start gap-3">
-                                    <div
-                                        class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
-                                        1</div>
-                                    <span class="text-gray-700">300g pizza dough</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <div
-                                        class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
-                                        2</div>
-                                    <span class="text-gray-700">200g crushed tomatoes</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <div
-                                        class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
-                                        3</div>
-                                    <span class="text-gray-700">250g fresh mozzarella</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <div
-                                        class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
-                                        4</div>
-                                    <span class="text-gray-700">Fresh basil leaves</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <div
-                                        class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
-                                        5</div>
-                                    <span class="text-gray-700">2 tablespoons olive oil</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <div
-                                        class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
-                                        6</div>
-                                    <span class="text-gray-700">2 cloves garlic, minced</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <div
-                                        class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
-                                        7</div>
-                                    <span class="text-gray-700">Salt and pepper to taste</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <div
-                                        class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
-                                        8</div>
-                                    <span class="text-gray-700">Parmesan cheese for topping</span>
-                                </li>
-                            </ul>
+                            <div class="space-y-3" id="ingredients-list"></div>
                         </div>
                     </div>
                     <div id="instructions-tab" class="tab-content h-87.5 overflow-y-auto scrollbar-thin hidden">
-                        <div class="space-y-6" id="instructions-list">
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-xl font-bold shrink-0">
-                                    1</div>
-                                <div class="flex-1 pt-2">
-                                    <p class="text-gray-700">Let pizza dough come to room temperature and rest for 1
-                                        hour.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-xl font-bold shrink-0">
-                                    2</div>
-                                <div class="flex-1 pt-2">
-                                    <p class="text-gray-700">Preheat oven to maximum temperature (usually 250°C/480°F).
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-xl font-bold shrink-0">
-                                    3</div>
-                                <div class="flex-1 pt-2">
-                                    <p class="text-gray-700">Mix crushed tomatoes with olive oil, garlic, salt, and
-                                        pepper for the sauce.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-xl font-bold shrink-0">
-                                    4</div>
-                                <div class="flex-1 pt-2">
-                                    <p class="text-gray-700">
-                                        Roll out dough on a floured surface to desired thickness.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-xl font-bold shrink-0">
-                                    5</div>
-                                <div class="flex-1 pt-2">
-                                    <p class="text-gray-700">
-                                        Spread tomato sauce, add torn mozzarella pieces, and drizzle with olive oil.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-xl font-bold shrink-0">
-                                    6</div>
-                                <div class="flex-1 pt-2">
-                                    <p class="text-gray-700">
-                                        Bake for 10-12 minutes until crust is golden. Top with fresh basil and parmesan.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="space-y-6" id="instructions-list"></div>
                     </div>
                     <div id="nutrition-tab" class="tab-content h-87.5 overflow-y-auto scrollbar-thin hidden">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -299,8 +192,7 @@
                                     </div>
                                     <span class="text-gray-700 font-medium text-xs md:text-base">Calories</span>
                                 </div>
-                                <span class="text-base md:text-xl font-bold text-gray-900" id="calories-value">580
-                                    kcal</span>
+                                <span class="text-base md:text-xl font-bold text-gray-900" id="calories-value"></span>
                             </div>
                             <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
                                 <div class="flex items-center">
@@ -309,7 +201,7 @@
                                     </div>
                                     <span class="text-gray-700 font-medium text-xs md:text-base">Protein</span>
                                 </div>
-                                <span class="text-base md:text-xl font-bold text-gray-900" id="protein-value">24g</span>
+                                <span class="text-base md:text-xl font-bold text-gray-900" id="protein-value"></span>
                             </div>
                             <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
                                 <div class="flex items-center">
@@ -319,7 +211,7 @@
                                     </div>
                                     <span class="text-gray-700 font-medium text-xs md:text-base">Carbohydrates</span>
                                 </div>
-                                <span class="text-base md:text-xl font-bold text-gray-900" id="carbs-value">68g</span>
+                                <span class="text-base md:text-xl font-bold text-gray-900" id="carbs-value"></span>
                             </div>
                             <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
                                 <div class="flex items-center">
@@ -328,7 +220,7 @@
                                     </div>
                                     <span class="text-gray-700 font-medium text-xs md:text-base">Fat</span>
                                 </div>
-                                <span class="text-base md:text-xl font-bold text-gray-900" id="fat-value">22g</span>
+                                <span class="text-base md:text-xl font-bold text-gray-900" id="fat-value"></span>
                             </div>
                             <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
                                 <div class="flex items-center">
@@ -338,7 +230,7 @@
                                     </div>
                                     <span class="text-gray-700 font-medium text-xs md:text-base">Fiber</span>
                                 </div>
-                                <span class="text-base md:text-xl font-bold text-gray-900" id="fiber-value">4g</span>
+                                <span class="text-base md:text-xl font-bold text-gray-900" id="fiber-value"></span>
                             </div>
                             <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
                                 <div class="flex items-center">
@@ -347,34 +239,16 @@
                                     </div>
                                     <span class="text-gray-700 font-medium text-xs md:text-base">Sodium</span>
                                 </div>
-                                <span class="text-base md:text-xl font-bold text-gray-900"
-                                    id="sodium-value">920mg</span>
+                                <span class="text-base md:text-xl font-bold text-gray-900" id="sodium-value"></span>
                             </div>
                         </div>
                     </div>
                     <div id="tips-tab" class="tab-content h-87.5 overflow-y-auto scrollbar-thin hidden">
-                        <div class="space-y-4" id="tips-list">
-                            <div class="flex items-center gap-3 p-4 bg-amber-50 rounded-xl border-l-4 border-amber-400">
-                                <i class="text-amber-600 text-xl fa-solid fa-circle-check"></i>
-                                <p class="text-gray-700">Make bolognese sauce a day ahead for better flavor</p>
-                            </div>
-                            <div class="flex items-center gap-3 p-4 bg-amber-50 rounded-xl border-l-4 border-amber-400">
-                                <i class="text-amber-600 text-xl fa-solid fa-circle-check"></i>
-                                <p class="text-gray-700">Don't skip the resting time after baking</p>
-                            </div>
-                            <div class="flex items-center gap-3 p-4 bg-amber-50 rounded-xl border-l-4 border-amber-400">
-                                <i class="text-amber-600 text-xl fa-solid fa-circle-check"></i>
-                                <p class="text-gray-700">Use fresh pasta sheets for best texture</p>
-                            </div>
-                            <div class="flex items-center gap-3 p-4 bg-amber-50 rounded-xl border-l-4 border-amber-400">
-                                <i class="text-amber-600 text-xl fa-solid fa-circle-check"></i>
-                                <p class="text-gray-700">Freeze leftovers in individual portions</p>
-                            </div>
-                        </div>
+                        <div class="space-y-4" id="tips-list"></div>
                     </div>
                     <div class="flex items-center space-x-4 mt-8 pt-6 border-t border-gray-200">
                         <button id="try-another-btn"
-                            class="bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition transform hover:scale-105 cursor-pointer text-sm md:text-base flex items-center gap-1 md:gap-2">
+                            class="bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition transform hover:scale-105 cursor-pointer text-sm md:text-base flex items-center gap-1 md:gap-2">
                             <i class="fa-solid fa-rotate"></i>
                             Try Another Recipe
                         </button>
@@ -383,7 +257,6 @@
             </div>
         </section>
     </main>
-
 
     <script src="./JS/main.js"></script>
 </body>
